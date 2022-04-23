@@ -1,0 +1,671 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('notosanskr/NotoSansKR.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: middle;
+    border: none;
+}
+
+html {
+    font-size: 10px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Open Sans', 'Noto Sans KR', dotum, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    color: #666666;
+
+}
+
+.wrap {
+    position: relative;
+    display: block;
+}
+/* 모달창 */
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 99999;
+}
+
+.modal-wrap {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   display: block;
+   width: 400px;
+   height: 250px;
+   background-color: #fff;
+   border-radius: 10px; 
+}
+
+.modal-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+.modal-bt {}
+
+/* 공통요소 */
+.container {
+    position: relative;
+    display: block;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.cleartfix::after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+/* 상단 */
+.header {
+    width: 100%;
+    height: 80px;
+    min-width: 1240px;
+    overflow: hidden;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 50;
+    background-color: #fff;
+    border-bottom: 2px solid #bdbdbd;
+}
+
+
+.header > .container {
+    position: relative;
+    display: block;
+    height: 100%;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    display: block;
+
+    transform: translateY(-50%)
+}
+
+.logo img {
+    width: 116px;
+    height: 46px;
+}
+
+.nav {
+    position: relative;
+    display: block;
+}
+
+.gnb {
+    position: absolute;
+    left: 169px;
+    display: block;
+
+}
+
+.gnb>li {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0 25px;
+}
+
+.gnb>li>a {
+    position: relative;
+    display: block;
+    font-size: 19px;
+    line-height: 90px;
+    color: #000000;
+    font-weight: 500;
+
+}
+
+.gnb>li>a:hover {
+    color: #0088de;
+}
+.submenu{
+    position: relative;
+    top: -2px;
+    display: none;
+    border-top: 3px solid #0088de;
+    display: block;
+}
+
+.submenu>li{
+    position: relative;
+    display: block;
+}
+
+.help {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+}
+
+.help-list {
+    position: relative;
+    display: block;
+    height: 100%;
+
+}
+
+.help-1 {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 35px;
+    color: #5f5f5f;
+    font-weight: bold;
+    vertical-align: -2px;
+
+}
+
+.help-2 {
+    position: relative;
+    display: inline-block;
+    width: 116px;
+    height: 35px;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 35px;
+    color: #fff;
+    box-sizing: border-box;
+    border-radius: 15px;
+
+    background: #0175c2 url('../images/ico_header_virtual.png') no-repeat;
+    background-position: calc(100% - 80px) center;
+    vertical-align: -2px;
+
+    margin-left: 30px;
+    padding: 0 10px;
+
+}
+
+.help-3 {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+
+    font-size: 13px;
+    line-height: 35px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    background-color: #7a7a7c;
+    border-radius: 35px;
+    vertical-align: -2px;
+
+    margin-left: 9px;
+
+
+}
+
+
+
+
+/* 메인 */
+.main {
+    position: relative;
+    display: block;
+    margin-top: 59px;
+}
+
+
+/* 비주얼 */
+.visual {
+    position: relative;
+    display: block;
+    width: 1660px;
+    height: 820px;
+    background-size: cover;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+.visual .container {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.sw-visual {
+    width: 100%;
+    height: 100%;
+}
+
+.sw-visual img {
+    position: relative;
+    display: block;
+}
+
+.sw-visual-next {
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+    right: 94px;
+    display: block;
+    width: 35px;
+    height: 67px;
+    background: url("../images/arrow2_next.png") no-repeat;
+    background-position: 0px 0px;
+    border: 0;
+    z-index: 10;
+}
+
+.sw-visual-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+    left: 94px;
+    display: block;
+    width: 35px;
+    height: 67px;
+    background: url("../images/arrow2_prev.png") no-repeat;
+    background-position: 0px 0px;
+    border: 0;
+    z-index: 10;
+}
+
+.swiper-button-prev::after{
+    display: none;
+}
+
+.swiper-button-next::after{
+    display: none;
+}
+
+.swiper-button-next, .swiper-button-prev{
+    width: 40px;
+    height: 69px;
+}
+
+.visual-more{
+    display: inline-block;
+    position: absolute;
+    left: 270px;
+    top: 450px;
+    padding-right: 57px;
+    font-size: 14px;
+    line-height: 35px;
+    color: #000;
+    background: url('../images/arrow1.png') right 0 no-repeat;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+    position: absolute;
+    bottom: 30px;
+    display: block;
+    width: 225px;
+    height: 1px;
+    background-color: #fff;
+    transition: all 0.3s ease-out;
+}
+
+
+/* 소개 */
+.about {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 207px;
+    margin-bottom: 47px;
+}
+
+.about .continaer {
+    position: relative;
+    display: block;
+    height: 100%;
+}
+
+.about-left {
+    position: relative;
+    display: block;
+    width: 550px;
+    height: 100%;
+    float: left;
+
+}
+
+.about-left h2 {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    font-size: 45px;
+    line-height: 65px;
+    color: #000000;
+
+}
+
+.about-line {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    display: block;
+    width: 180px;
+    height: 2px;
+    background-color: #000;
+}
+
+.about-right {
+    position: relative;
+    display: block;
+    float: right;
+}
+
+.about-txt {
+    position: relative;
+    display: block;
+}
+
+.about-txt em {
+    position: relative;
+    display: block;
+    font-size: 18px;
+    line-height: 32px;
+    color: #000;
+    margin-bottom: 20px;
+    font-family: 'Open Sans', 'Noto Sans KR', dotum, Arial, sans-serif;
+}
+
+.about-txt span {
+    position: relative;
+    display: block;
+    font-size: 16px;
+    line-height: 16px;
+    color: #666666;
+    margin-bottom: 27px;
+}
+
+.about-txt a {
+    position: relative;
+    display: block;
+
+    width: 160px;
+    height: 40px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 40px;
+    color: #fff;
+    background: #000 url('../images/arrow4.png') no-repeat 130px center;
+
+
+}
+
+/* 고객 */
+.polite {
+    position: relative;
+    display: block;
+    width: 1900px;
+    height: 630px;
+    margin: 0 auto;
+}
+
+.polite .container {
+    height: 100%;
+    width: 100%;
+}
+
+.sw-polite {
+    width: 100%;
+    height: 100%;
+}
+
+.sw-polite img {
+    position: relative;
+    display: block;
+}
+
+.sw-polite-prev {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: -110px;
+    transform: translateY(-50%);
+    width: 37px;
+    height: 71px;
+    
+    border: 0;
+    background: url('../images/arrow3_prev.png') no-repeat center;
+}
+
+.sw-polite-next {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: -110px;
+    transform: translateY(-50%);
+    width: 37px;
+    height: 71px;
+    background: url('../images/arrow3_next.png') no-repeat center;
+}
+
+.polite-list {
+    position: absolute;
+    bottom: 30px;
+    display: block;
+    width: 100%;
+
+    height: 1px;
+    background-color: #d5d5d5;
+    text-align: center;
+
+}
+
+.polite-list li {
+    position: relative;
+
+    display: inline-block;
+    width: 248px;
+    height: 16px;
+
+}
+
+.polite-list li a {
+
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    border: solid 2px #fff;
+    background-color: #3a845e;
+    border-radius: 50%;
+
+}
+
+.customer {
+    position: relative;
+    display: block;
+    
+}
+
+.customer .container {
+    position: relative;
+    display: block;
+
+    height: 100%;
+    margin-top: 210px;
+    margin-bottom: 335px;
+}
+
+.customer span {
+    position: relative;
+
+    left: 0;
+    display: block;
+    width: 100%;
+    font-size: 212px;
+    line-height: 212px;
+    color: #f7f7f7;
+    font-weight: bold;
+    letter-spacing: -0.01em;
+    margin-bottom: 115px;
+}
+
+.customer h2 {
+    position: absolute;
+    right: 0;
+
+    top: 60px;
+    text-align: right;
+    display: block;
+    font-size: 75px;
+    line-height: 100px;
+    color: #000000;
+
+}
+
+.customer-box {
+    position: relative;
+    display: block;
+    border-top: 1px solid #000;
+
+    height: 190px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.customer-box h3 {
+    position: relative;
+    width: 300px;
+    
+    float: left;
+    font-size: 36px;
+    line-height: 42px;
+    color: #000;
+    display: block;
+}
+
+.customer-cate {
+    position: relative;
+    display: block;
+    width: calc(1200px - 550px);
+    float: left;
+}
+
+.customer-box p {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 200px;
+    
+    top: 20px;
+    font-size: 18px;
+    line-height: 34px;
+    color: #000;
+    
+}
+
+
+
+.customer-box button {
+    position: absolute;
+    top: 20px;
+    right: -190px;
+    display: block;
+    
+    border: none;
+    width: 40px;
+    height: 40px;
+    background: url('../images/arrow5.png') no-repeat;
+}
+
+/* 하단 */
+.footer {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 165px;
+    background-color: #f0f0f0;
+    
+}
+.footer .container{
+    position: relative;
+    display: block;
+    width: 1200px;
+    height: 100%;
+    
+}
+
+.f-logo{
+    position: absolute;
+    top: 47px;
+    left: 0px;
+    display: block;
+}
+.txt{
+    padding-left: 210px;
+    padding-top: 47px;
+    font-size: 14px;
+    line-height: 28px;
+    color: #888888;
+}
+.provsion{
+    position: absolute;
+    top: 60px;
+    right: 250px;
+}
+.f-site{
+    position: absolute;
+    right: 20px;
+    top: 48px;
+    text-align: left;
+    padding-left: 20px;
+    width: 210px;
+    height: 40px;
+    border: solid 0px #fff;
+    font-size: 14px;
+    color: #333333;
+    background: url('../images/select1.png') no-repeat right;
+    background-color: #ffff;
+    appearance: none;
+}
+.sns{
+    position: absolute;
+    right: 17px;
+    top: 95px;
+}
+
+
