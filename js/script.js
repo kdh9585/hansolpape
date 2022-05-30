@@ -1,12 +1,7 @@
 $(document).ready(function () {
     // 모달창
     let modal_close = $('.modal-close');
-    let modal = $('.modal');
-    let sw_visual_control_a = $('.sw-visual-control a');
-    let sw_visual_bar = $('.sw-visual-bar');
-    // 자연스러운 UI 를 위해서 글자 색상 유지
-    let sw_visual_focus = 0;
-
+    let modal = $('.modal-wrap');
 
     modal_close.click(function () {
         modal.hide();
@@ -16,6 +11,14 @@ $(document).ready(function () {
     modal_bt.click(function () {
         modal.show();
     });
+
+    let sw_visual_control_a = $('.sw-visual-control a');
+    let sw_visual_bar = $('.sw-visual-bar');
+    // 자연스러운 UI 를 위해서 글자 색상 유지
+    let sw_visual_focus = 0;
+
+
+    
 
     //  주메뉴 기본형
     let gnb = $('.gnb');
@@ -45,8 +48,8 @@ $(document).ready(function () {
                 changeVisual(this.realIndex)
             }
         }
-    
-    
+
+
 
     });
 
